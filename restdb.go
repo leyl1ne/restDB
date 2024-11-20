@@ -91,7 +91,7 @@ func InserUser(u User) bool {
 		return false
 	}
 
-	stmt, err := db.Prepare("INSERT INTO user(Username, Password, LastLogin, Admin, Active) values($1,$2,$3,$4,$5)")
+	stmt, err := db.Prepare("INSERT INTO users(Username, Password, LastLogin, Admin, Active) values($1,$2,$3,$4,$5)")
 	if err != nil {
 		log.Println("Add user:", err)
 		return false

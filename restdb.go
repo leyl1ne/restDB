@@ -175,7 +175,7 @@ func FindUserUsername(usernameQuery string) User {
 	}
 	defer db.Close()
 
-	rows, err := db.Query("SELECT * FORM users WHERE Username = $1 \n", usernameQuery)
+	rows, err := db.Query("SELECT * FROM users WHERE Username = $1 \n", usernameQuery)
 	if err != nil {
 		log.Println("FindUserUsername Query:", err)
 		return User{}

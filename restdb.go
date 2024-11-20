@@ -110,7 +110,7 @@ func ListAllUsers() []User {
 	}
 	defer db.Close()
 
-	rows, err := db.Query("SELECT * FORM users \n")
+	rows, err := db.Query("SELECT * FROM users \n")
 	if err != nil {
 		log.Println(err)
 		return []User{}
